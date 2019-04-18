@@ -283,7 +283,7 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -detectsleep -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -419,4 +419,5 @@ mode "$mode_gaps_outer" {
 
 #exec --no-startup-id export QT_AUTO_SCREEN_SCALE_FACTOR=2
 #exec --no-startup-id export GDK_SCALE=2
-exec --no-startup-id xinput --set-prop 13 "libinput Natural Scrolling Enabled" 1
+exec --no-startup-id xinput set-prop 13 "libinput Natural Scrolling Enabled" 1
+exec --no-startup-id xinput set-prop 13 "libinput Accel Speed" 0.8
